@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at 20% 40%, #0f0f0f, #111820);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.home-cont {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+  animation: bgShift 10s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-content-cont {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  padding: 40px;
+  max-width: 700px;
+  text-align: center;
+  animation: floatUp 2s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00fff0, #00d1ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonFlash 4s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes neonFlash {
+  0% { text-shadow: 0 0 8px #00fff0; }
+  100% { text-shadow: 0 0 20px #00fff0; }
+}
+
+.home-content-cont p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-btn {
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #00fff0, #00d1ff);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+.home-btn:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-heading {
+    font-size: 2.1rem;
+  }
+
+  .home-content-cont {
+    padding: 25px;
+  }
+
+  .home-btn {
+    width: 100%;
+  }
+}

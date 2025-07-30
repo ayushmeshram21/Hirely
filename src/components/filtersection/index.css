@@ -1,0 +1,157 @@
+.filters-group-container {
+  padding: 20px;
+  background-color: #111827;
+  color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.profile-details-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.profile-name,
+.profile-bio {
+  color: #e5e7eb;
+  animation: slideIn 0.5s ease-in-out;
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.filter-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 16px 0 10px;
+  color: #f3f4f6;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.filters-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.fliters-list-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: popIn 0.4s ease-in-out;
+}
+
+.checkbox-input {
+  accent-color: #3b82f6;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.checkbox-input:hover {
+  transform: scale(1.15);
+}
+
+.filter-label {
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.filter-label:hover {
+  color: #60a5fa;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 20px 0;
+  animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 🔥 Responsive Styles */
+@media screen and (max-width: 768px) {
+  .filters-group-container {
+    padding: 16px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+
+  .profile-bio {
+    font-size: 14px;
+  }
+
+  .filter-heading {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .filter-label {
+    font-size: 14px;
+  }
+
+  .checkbox-input {
+    width: 16px;
+    height: 16px;
+  }
+
+  .fliters-list-item {
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filters-group-container {
+    padding: 12px;
+  }
+
+  .filter-heading {
+    font-size: 15px;
+  }
+
+  .profile-name,
+  .profile-bio {
+    text-align: center;
+  }
+}
