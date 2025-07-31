@@ -155,3 +155,71 @@
     text-align: center;
   }
 }
+
+.filters-group-container {
+  padding: 20px;
+  background-color: #111827;
+  color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 120px auto 0;
+  animation: slideFadeIn 0.8s ease forwards;
+  opacity: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* Prevent text overflow in all labels and bios */
+.filter-label,
+.profile-name,
+.profile-bio {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* Fix for smaller screens */
+@media screen and (max-width: 768px) {
+  .filters-group-container {
+    padding: 16px;
+    max-width: 95%;
+    margin-top: 100px;
+  }
+
+  .filter-label,
+  .profile-name,
+  .profile-bio {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filters-group-container {
+    padding: 12px;
+    margin-top: 90px;
+  }
+
+  .filter-label,
+  .profile-name,
+  .profile-bio {
+    font-size: 13px;
+  }
+}
+
+/* Slide + Fade animation */
+@keyframes slideFadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

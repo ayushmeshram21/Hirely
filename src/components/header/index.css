@@ -101,7 +101,7 @@
 .menu-icon div {
   width: 25px;
   height: 3px;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(243, 239, 239);
   border-radius: 2px;
 }
 
@@ -130,4 +130,25 @@
   .logout-btn {
     display: none;
   }
+}
+
+/* Default nav style with blur (keep as is) */
+.my-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px); /* <-- this causes blur */
+  background: rgba(17, 24, 39, 0.6); /* semi-transparent dark */
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Remove blur on /jobs page (search input visible) */
+.my-nav.shrink-nav {
+  backdrop-filter: none !important;
+  background: #111827 !important; /* fully solid dark background */
 }

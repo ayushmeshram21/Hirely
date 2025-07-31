@@ -105,8 +105,11 @@ const Jobs = () => {
 
                       ) : (
                         <div className='col-8 p-3'>
-                        <input onKeyUp ={onChangeUserIn} type="search" className='form-control w-75 border border-danger mb-3 '/>
-                        <ul className="">
+<input 
+  onKeyUp={onChangeUserIn} 
+  type="search" 
+  className='form-control w-75 border border-danger mb-3 search-input-visible-fix' 
+/>                        <ul className="">
 
                               {
                                 allValues.userArr.map(each=> <DisplayAllJobs userDetails = {each} key={each.id}/>)
